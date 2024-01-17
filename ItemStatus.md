@@ -12,7 +12,9 @@ function hGetItemStatusData(obj) {
           active: true,
       foreground: 'E6E6E6',
       background: '556918',
-       iconColor: 'E6E6E6'
+       iconColor: 'E6E6E6',
+     description: 'text',
+            icon: 'image:example.jpg'
     };
   }
   return null;
@@ -27,6 +29,20 @@ Se o item estiver ativado, ele será exibido na cor verde por padrão, caso o va
 `background` cor de fundo no formato hexadecimal<br>
 
 `iconColor` cor do ícone no formato hexadecimal<br>
+
+`description` (v2.21.0+) descrição do item. A descrição será adicionada após o nome/título do item<br>
+
+`icon` (v2.21.0+) ícone personalizado do item. Baseado em algum item já existente no programa.<br>
+Tipos disponíveis: `image`  `video`  `announcement`  `background`  `theme`<br>
+
+Exemplo:
+```javascript
+icon: 'image:name.jpg' //filename
+icon: 'video:name.mp4' //filename
+icon: 'announcement:1234' //id
+icon: 'background:1234' //id
+icon: 'theme:1234' //id
+```
 
 Obs.: Todos os parâmetros são opcionais
 
