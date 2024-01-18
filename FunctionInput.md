@@ -47,7 +47,7 @@ Valor padrão: `Nome da variável`
 __type__ `string`<br>
 Tipo de parâmetro. Isso define o tipo de componente exibido na interface para definir valores.<br>
 Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
-Tipos disponíveis: `title`  `separator`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `slides`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `playback`  `countdown`  `countdown_cp`  `text_cp`  `background`  `theme`<br>
+Tipos disponíveis: `title`  `separator`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`<br>
 Valor padrão: `string`
 
 __description__ `string`<br>
