@@ -47,7 +47,7 @@ Valor padrão: `Nome da variável`
 __type__ `string`<br>
 Tipo de parâmetro. Isso define o tipo de componente exibido na interface para definir valores.<br>
 Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
-Tipos disponíveis: `title`  `separator`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`<br>
+Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`<br>
 Valor padrão: `string`
 
 __description__ `string`<br>
@@ -102,6 +102,20 @@ Valores disponíveis:<br>
 ### _Disponível apenas para tipo 'background'_<br>
 __background_type__ `string`<br>
 Tipos disponíveis: `all`  `theme`  `my_video`  `my_image`  `video`  `image`
+
+### _Disponível apenas para tipo 'label'_ <br>
+`v2.22.0+` <br>
+__text__ `string or function` Texto que será exibido. Pode ser uma function que retorna uma string.<br>
+__copyable__ `boolean` _(opcional)_ Exibe um ícone de copiar, para copiar o conteúdo de `text`.<br>
+__text_to_copy__ `string or function` _(opcional)_ Texto que será copiado em vez de `text`.<br>
+__monospaced__ `boolean` _(opcional)_ Exibir o texto com uma fonte monospaced.<br>
+
+### _Disponível apenas para tipo 'button'_ <br>
+`v2.22.0+` <br>
+__button_label__ `string or function` Texto que será exibido no botão. Pode ser uma function que retorna uma string.<br>
+__action__ `function` Ação que será executada ao clicar no botão.<br>
+__hide_label__ `boolean` _(opcional)_ Para exibir somente o botão, centralizado, sem o "label" identificador do campo `name`.<br>
+
 
 ---
 
@@ -465,5 +479,28 @@ Alguns exemplos de input:
            name: 'Input name',
            type: 'theme',
   default_value: "123456789" //optional
+}
+```
+
+```javascript
+{
+             id: 'var_name',
+           name: 'Input name',
+           type: 'label',
+           text: " - Text - ",
+           copyable: true, //optional
+           text_to_copy: "Text" //optional
+}
+```
+
+```javascript
+{
+             id: 'var_name',
+           name: 'Input name',
+           type: 'button',
+   button_label: "button_label",
+         action: function() {
+                   //do action
+                 }
 }
 ```
