@@ -38,7 +38,7 @@ function getData(obj) {
     if (obj.screen_id == 'public' && obj.slide_type == 'blank') {
         // Isso faz com que na tela 'public'
         // quando a opção F9 (sem texto) estiver ativada
-        // o texto '♪' será exibido
+        // o texto '♪' seja exibido
         return {
             add_end: '♪'
         };
