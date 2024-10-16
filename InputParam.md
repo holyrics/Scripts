@@ -16,7 +16,7 @@ Para utilizar formatação HTML inicie a string com `<html>`.<br>
 __type__ `string`  `default: 'string'`<br>
 Tipo de parâmetro. Isso define o tipo de componente exibido na interface para definir valores.<br>
 Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
-Tipos disponíveis: #input_types#<br>
+Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`<br>
 
 __description__ `string`  `default: ''`<br>
 Informa uma descrição para o parâmetro, para poder ser exibido na tela como "ajuda".<br>
