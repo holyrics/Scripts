@@ -11,10 +11,18 @@ E então a function pode ter a implementação de definir o player do programa p
 O parâmetro `obj.type` contém o tipo do item que gerou a ação.<br>
 O parâmetro `obj.item` contém as informações do respectivo item que gerou a ação.
 
+`v2.24.0+`<br>
+A partir da versão 2.24.0 é possível criar ação de contexto selecionando múltiplos itens.<br>
+Quando a ação for gerada a partir de uma seleção múltipla, os itens estarão disponíveis em `obj.items` e o `obj.item` será `null`.
+
 ## Exemplo
 
 ```javascript
 function scriptAction(obj) {
+    if (obj.items) {
+        //múltiplos itens
+        return;
+    }
     if (obj.type == 'video') {
         h.getPlayer().setMute(true);
         h.playVideo(obj.item.file_fullname);
@@ -140,7 +148,7 @@ function scriptAction(obj) {
 ## announcement
 ```json
 {
-  "id": 1734201631915,
+  "id": 1734201989090,
   "name": "Announcement"
 }
 ```
@@ -244,7 +252,7 @@ function scriptAction(obj) {
     "type": "temporary",
     "name": "Temporário",
     "datetime": "2024-08-28 12:00",
-    "datetime_millis": "1734201632207"
+    "datetime_millis": "1734201989500"
   }
 }
 ```
@@ -262,8 +270,8 @@ function scriptAction(obj) {
   "playlist": {
     "type": "temporary",
     "name": "Temporário",
-    "datetime": "2024-12-14 15:40",
-    "datetime_millis": "1734201632209"
+    "datetime": "2024-12-14 15:46",
+    "datetime_millis": "1734201989502"
   }
 }
 ```
@@ -271,8 +279,8 @@ function scriptAction(obj) {
 ## chat_message
 ```json
 {
-  "id": "1734201632211",
-  "datetime": 1734201632211,
+  "id": "1734201989504",
+  "datetime": 1734201989504,
   "user_id": "-1qfe9t8wtrsb6p5",
   "name": "example",
   "message": "example"
