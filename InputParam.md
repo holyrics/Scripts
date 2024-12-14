@@ -34,6 +34,24 @@ function(obj) {
 }
 ```
 
+__validator__ `function`  `default: null`  `v2.24.0+`<br>
+Validar o conteúdo do item quando o botão OK da janela de diálogo for pressionado.<br>
+Retorne uma string com o erro ou `true` se o item for válido.<br>
+```javascript
+function(value, input, inputs) {
+  //value
+  //input.id
+  //input.name
+  //input.value
+  //inputs['abc'].name
+  //inputs['abc'].value
+  if (value.trim().isEmpty()) {
+    return "Field '" + input.name + "' is empty";
+  }
+  return true;
+}
+```
+
 ### _Disponível apenas para tipo 'string'_<br>
 __suggested_values__ `array or function`  `default: null`<br>
 Exibe uma lista de sugestões ao clicar na "setinha" disponível na caixa de texto, mas permite que qualquer valor seja digitado na caixa de texto.<br>
@@ -91,12 +109,30 @@ Valores disponíveis:<br>
 __background_type__ `string`  `default: 'all'`<br>
 Tipos disponíveis: `all`  `theme`  `my_video`  `my_image`  `video`  `image`
 
+### _Disponível apenas para tipo 'title'_ <br>
+__setup__ `function`  `default: null`  `v2.24.0+`<br>
+Método que será executado ao exibir uma janela com inputs.<br>
+O parâmetro recebido pela function é um objeto do tipo `JSInputParamWindow`.<br>
+Exemplo de uso: capturar a referência para o objeto `dialog` no contexto atual e chamar `dialog.ok()` em outra situação, por exemplo, para forçar a reinicialização da janela.<br>
+```javascript
+function(dialog) {
+  //simula o clique no botão ok
+  //dialog.ok();
+
+  //simula o clique no botão cancel
+  //dialog.cancel();
+}
+```
+
 ### _Disponível apenas para tipo 'label'_ <br>
 `v2.22.0+` <br>
 __text__ `string or function` _(obrigatório)_ Texto que será exibido. Pode ser uma function que retorna uma string.<br>
 __copyable__ `boolean` `default: false` Exibe um ícone de copiar, para copiar o conteúdo de `text`.<br>
 __text_to_copy__ `string or function` `default: text` Texto que será copiado em vez de `text`.<br>
 __monospaced__ `boolean` `default: false` Exibir o texto com uma fonte monospaced.<br>
+
+`v2.24.0+` <br>
+__hide_label__ `boolean` `default: false` Para exibir somente o texto, centralizado, sem o "label" identificador do campo `name`.<br>
 
 ### _Disponível apenas para tipo 'button'_ <br>
 `v2.22.0+` <br>
