@@ -29,7 +29,9 @@ function scriptAction(obj) {
   "file_fullname": "file name.mp3",
   "file_relative_path": "audio\\file name.mp3",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\audio\\file name.mp3",
-  "is_dir": false
+  "is_dir": false,
+  "extension": "mp3",
+  "properties": {}
 }
 ```
 
@@ -40,7 +42,9 @@ function scriptAction(obj) {
   "file_fullname": "folder name",
   "file_relative_path": "audio\\folder name",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\audio\\folder name",
-  "is_dir": true
+  "is_dir": true,
+  "extension": "",
+  "properties": {}
 }
 ```
 
@@ -51,7 +55,9 @@ function scriptAction(obj) {
   "file_fullname": "file name.mp4",
   "file_relative_path": "video\\file name.mp4",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\video\\file name.mp4",
-  "is_dir": false
+  "is_dir": false,
+  "extension": "mp4",
+  "properties": {}
 }
 ```
 
@@ -62,7 +68,9 @@ function scriptAction(obj) {
   "file_fullname": "folder name",
   "file_relative_path": "video\\folder name",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\video\\folder name",
-  "is_dir": true
+  "is_dir": true,
+  "extension": "",
+  "properties": {}
 }
 ```
 
@@ -73,7 +81,9 @@ function scriptAction(obj) {
   "file_fullname": "file name.jpg",
   "file_relative_path": "image\\file name.jpg",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\image\\file name.jpg",
-  "is_dir": false
+  "is_dir": false,
+  "extension": "jpg",
+  "properties": {}
 }
 ```
 
@@ -84,7 +94,9 @@ function scriptAction(obj) {
   "file_fullname": "folder name",
   "file_relative_path": "image\\folder name",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\image\\folder name",
-  "is_dir": true
+  "is_dir": true,
+  "extension": "",
+  "properties": {}
 }
 ```
 
@@ -95,7 +107,9 @@ function scriptAction(obj) {
   "file_fullname": "file name.txt",
   "file_relative_path": "file\\file name.txt",
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\file\\file name.txt",
-  "is_dir": false
+  "is_dir": false,
+  "extension": "txt",
+  "properties": {}
 }
 ```
 
@@ -126,7 +140,7 @@ function scriptAction(obj) {
 ## announcement
 ```json
 {
-  "id": 1724863945407,
+  "id": 1734201631915,
   "name": "Announcement"
 }
 ```
@@ -167,7 +181,8 @@ function scriptAction(obj) {
     "id": "zdBNPrwV7g3V7",
     "type": "image",
     "name": "file name.jpg",
-    "isDir": false
+    "isDir": false,
+    "properties": {}
   }
 }
 ```
@@ -222,12 +237,33 @@ function scriptAction(obj) {
     "id": "zdBNPrwV7g3V7",
     "type": "image",
     "name": "file name.jpg",
-    "isDir": false
+    "isDir": false,
+    "properties": {}
   },
   "playlist": {
     "type": "temporary",
     "name": "Temporário",
-    "datetime": "2024-08-28 12:00"
+    "datetime": "2024-08-28 12:00",
+    "datetime_millis": "1734201632207"
+  }
+}
+```
+
+## song_playlist_item
+```json
+{
+  "item": {
+    "id": "zjrcbHzFKCxyc",
+    "type": "song",
+    "name": "title (artist)",
+    "song_id": "12345",
+    "reference_id": "12345"
+  },
+  "playlist": {
+    "type": "temporary",
+    "name": "Temporário",
+    "datetime": "2024-12-14 15:40",
+    "datetime_millis": "1734201632209"
   }
 }
 ```
@@ -235,10 +271,12 @@ function scriptAction(obj) {
 ## chat_message
 ```json
 {
-  "id": "1724863945844",
-  "datetime": 1724863945844,
+  "id": "1734201632211",
+  "datetime": 1734201632211,
   "user_id": "-1qfe9t8wtrsb6p5",
   "name": "example",
   "message": "example"
 }
 ```
+
+
