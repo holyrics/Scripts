@@ -20,7 +20,7 @@ curl -X 'POST' \
 | `paragraphs` | _Array&lt;Object&gt;_ | Parâmetro alternativo para valores mais complexos.<br>Opcional se `lyrics` for declarado `v2.23.0+` |
 | `paragraphs.*.text` | _String_ | Texto do parágrafo `v2.23.0+` |
 | `paragraphs.*.description` | _String (opcional)_ | Descrição do parágrafo. coro, verso, ... `v2.23.0+` |
-| `paragraphs.*.translations` | _Object (opcional)_ | Traduções para o slide título.<br>Conjunto chave/valor. `v2.23.0+` |
+| `paragraphs.*.translations` | _Object (opcional)_ | Traduções para o slide.<br>Conjunto chave/valor. `v2.23.0+` |
 | `author` | _String (opcional)_ | Autor da música |
 | `artist` | _String (opcional)_ | Artista da música |
 | `copyright` | _String (opcional)_ | Copyright da música `v2.23.0+` |
