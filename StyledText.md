@@ -53,3 +53,10 @@ Exemplo Exemplo Exemplo Exemplo
 ```
 
 O trecho dentro da tag `<#:title>...</#>` será exibido com a formatação negrito e tamanho de fonte relativo de 120%.
+
+---
+
+É possível definir múltiplos estilos em uma mesma tag, separando o nome com espaço
+```
+<#:tag1 tag2>Exemplo</#>
+```
