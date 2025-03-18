@@ -5,7 +5,6 @@
 ---
 
 
-## 
 Código JavaScript intermediário que permite manipular a lista recebida do Planning Center Online.<br> <br>Permite, por exemplo, corrigir alguns detalhes no objeto identificado por padrão, ou mesmo gerar itens diferentes do padrão, baseado na resposta da API.
 
 ### transformSong(obj)
