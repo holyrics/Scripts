@@ -1,5 +1,10 @@
 # Function Input
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/FunctionInput.md)
+
+---
+
+
 É possível definir `inputs` (parâmetros) personalizados para a execução de um código javascript.<br>
 Dessa forma é possível criar modelos de código genéricos que serão executados conforme parâmetros informados na interface.
 

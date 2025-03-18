@@ -1,5 +1,10 @@
 # Pesquisa Avançada de Letra
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/AdvancedLyricSearch.md)
+
+---
+
+
 É possível realizar uma pesquisa avançada na aba de letras para um filtro mais preciso dos itens, utilizando itens não disponíveis na interface e filtrando por diferentes itens simultaneamente.
 
 Sintaxe da pesquisa:

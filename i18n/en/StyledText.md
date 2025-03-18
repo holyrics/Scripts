@@ -1,4 +1,9 @@
 # Styled Text
+
+**EN** | [PT](https://github.com/holyrics/Scripts/blob/main/StyledText.md)
+
+---
+
 To display text with advanced formatting, start the text with **&lt;styled&gt;**
 
 HTML tags available
@@ -53,3 +58,10 @@ Example Example Example Example
 ```
 
 The text inside the tag `<#:title>...</#>` will be displayed in bold formatting and a relative font size of 120%.
+
+---
+
+It is possible to define multiple styles in the same tag, separating the names with a space
+```
+<#:tag1 tag2>Example</#>
+```

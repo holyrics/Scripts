@@ -1,5 +1,10 @@
 # Item Status
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/StatusView.md)
+
+---
+
+
 É possível aplicar uma visualização personalizada de um item Script/API adicionado na barra de favoritos.<br>
 Para que o item possa ter uma cor diferente caso exista algum estado ativado/desativado, por exemplo.
 

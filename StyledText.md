@@ -1,4 +1,9 @@
 # Styled Text
+
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/StyledText.md)
+
+---
+
 Para exibir um texto com formatação avançada, inicie o texto com **&lt;styled&gt;**
 
 Tags HTML disponíveis

@@ -1,5 +1,10 @@
 # API Popup Create Song
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/ApiPopupCreateSong.md)
+
+---
+
+
 Opção via API para criar uma nova música abrindo a janela de edição de letra. (v2.21.0+)
 
 Isso permite que qualquer outro processo no computador possa enviar um conteúdo ao programa para abrir a janela de edição de letra.

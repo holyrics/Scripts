@@ -1,11 +1,11 @@
 ### createUrlToSearch(input)
 
-**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/WebSearch_JavaScript.md)
+**EN** | [PT](https://github.com/holyrics/Scripts/blob/main/WebSearch_JavaScript.md)
 
 ---
 
-Método que recebe o input da interface e precisa retornar a URL de pesquisa.<br>
-Exemplo:
+Method that receives input from the interface and needs to return the search URL.<br>
+Example:
 ```javascript
 function createUrlToSearch(input) {
     return 'https://domain.com/search?text=' + encodeURI(input.text);
@@ -13,8 +13,8 @@ function createUrlToSearch(input) {
 ```
 ---
 ### parseSearchResponseToList(response)
-Método para transformar a resposta da requisição feita na URL retornada no método `createUrlToSearch` em uma lista de objetos, cada objeto contendo os campos `id`, `title` e `artist_or_author`.<br>
-Exemplo:
+Method to transform the response of the request made to the URL returned in the `createUrlToSearch` method into a list of objects, each object containing the fields `id`, `title`, and `artist_or_author`.<br>
+Example:
 ```javascript
 function parseSearchResponseToList(response) {
     var json = JSON.parse(response);
@@ -31,8 +31,8 @@ function parseSearchResponseToList(response) {
 ```
 ---
 ### createUrlToGetById(id)
-Método que recebe o id do item selecionado na interface (na lista de resultados) e precisa retornar a URL para obter os dados completos da música (letra, por exemplo).<br>
-Exemplo:
+Method that receives the id of the selected item in the interface (in the results list) and needs to return the URL to obtain the complete data of the song (lyrics, for example).<br>
+Example:
 ```javascript
 function createUrlToGetById(id) {
     return 'https://domain.com/get?id=' + encodeURI(id);
@@ -40,8 +40,8 @@ function createUrlToGetById(id) {
 ```
 ---
 ### parseGetResponseToSong(response)
-Método para transformar a resposta da requisição feita na URL retornada no método `createUrlToGetById` em um objeto "música". O objeto precisa retornar os campos `title`, `artist`, `author` e `lyrics`.<br>
-Exemplo:
+Method to transform the response of the request made to the URL returned in the `createUrlToGetById` method into a "music" object. The object needs to return the fields `title`, `artist`, `author`, and `lyrics`.<br>
+Example:
 ```javascript
 function parseGetResponseToSong(response) {
     var json = JSON.parse(response);

@@ -1,5 +1,10 @@
 # Icon
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/Icon.md)
+
+---
+
+
 Opções disponíveis para exibição de ícones personalizados nas funcionalidades do Holyrics que aceitam esta sintaxe.<br>
 
 Tipos disponíveis: `image`  `video`  `announcement`  `background`  `theme`<br>

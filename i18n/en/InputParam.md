@@ -1,39 +1,39 @@
 # InputParam
 
-**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/InputParam.md)
+**EN** | [PT](https://github.com/holyrics/Scripts/blob/main/InputParam.md)
 
 ---
 
 
-InputParam é o item utilizado na criação de componentes criados nas janelas do programa.<br>
-Diversas funcionalidades baseadas em JavaScript podem criar janelas de input para obter entradas do usuário.<br>
-Itens como caixa de texto, checkbox, combobox, etc. podem ser criados utilizando a estrutura InputParam
+InputParam is the item used in the creation of components created in the program's windows.<br>
+Various JavaScript-based functionalities can create input windows to obtain user entries.<br>
+Items such as text box, checkbox, combobox, etc. can be created using the InputParam structure
 
-Parâmetros que cada item do tipo `InputParam` pode conter:<br>
-__id__ `string` _(obrigatório)_<br>
-Nome da variável
+Parameters that each item of type `InputParam` can contain:<br>
+__id__ `string` _(mandatory)_<br>
+Variable name
 
 __name__ `string`  `default: id`<br>
-Nome para exibir na interface.<br>
-Para utilizar formatação HTML inicie a string com `<html>`.<br>
-`name: '<html><i>nome</i>'`<br>
+Name to display in the interface.<br>
+To use HTML formatting, start the string with `<html>`.<br>
+`name: '<html><i>name</i>'`<br>
 
 __type__ `string`  `default: 'string'`<br>
-Tipo de parâmetro. Isso define o tipo de componente exibido na interface para definir valores.<br>
-Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
-Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`<br>
+Parameter type. This defines the type of component displayed in the interface to set values.<br>
+For example, a boolean type will display a `checkbox`.<br>
+Available types: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`<br>
 
 __description__ `string`  `default: ''`<br>
-Informa uma descrição para o parâmetro, para poder ser exibido na tela como "ajuda".<br>
+Provide a description for the parameter, so it can be displayed on the screen as "help".<br>
 
 __default_value__ `object`  `default: '' | false | 0 | null`<br>
-Define um valor inicial para o parâmetro.<br>
+Set an initial value for the parameter.<br>
 
 __onchange__ `function`  `default: null`  `v2.23.0+`<br>
-Método que será executado sempre que o componente tiver seu valor alterado.<br>
-(métodos `only read` não geram `onchange`, por exemplo, `type: title`)
-O parâmetro recebido pela function contém o `input` com o valor atual de todos os itens `InputParam` da janela atual, não somente do `InputParam` atual.<br>
-O parâmetro `view` (Map) foi adicionado na `v2.25.0`, permitindo, por exemplo, alterar o nome (label) atual definido para o parâmetro.<br>
+Method that will be executed whenever the component's value is changed.<br>
+(`only read` methods do not trigger `onchange`, for example, `type: title`)
+The parameter received by the function contains the `input` with the current value of all `InputParam` items in the current window, not just the current `InputParam`.<br>
+The `view` parameter (Map) was added in `v2.25.0`, allowing, for example, to change the current name (label) set for the parameter.<br>
 ```javascript
 function(obj) {
   //obj.input.xyz
@@ -46,8 +46,8 @@ function(obj) {
 ```
 
 __validator__ `function`  `default: null`  `v2.24.0+`<br>
-Validar o conteúdo do item quando o botão OK da janela de diálogo for pressionado.<br>
-Retorne uma string com o erro ou `true` se o item for válido.<br>
+Validate the content of the item when the OK button of the dialog window is pressed.<br>
+Return a string with the error or `true` if the item is valid.<br>
 ```javascript
 function(value, input, inputs) {
   //value
@@ -63,42 +63,42 @@ function(value, input, inputs) {
 }
 ```
 
-### _Disponível apenas para tipo 'string'_<br>
+### _Available only for 'string' type_<br>
 __suggested_values__ `array or function`  `default: null`<br>
-Exibe uma lista de sugestões ao clicar na "setinha" disponível na caixa de texto, mas permite que qualquer valor seja digitado na caixa de texto.<br>
-É possível retornar uma `function` para que os valores possam ser atualizados em tempo real.<br>
-Permite, por exemplo, exibir uma lista de valores sugeridos baseado no valor dos inputs anteriores.<br>
+Displays a list of suggestions when clicking on the "arrow" available in the text box, but allows any value to be typed in the text box.<br>
+It is possible to return a `function` so that the values can be updated in real time.<br>
+Allows, for example, to display a list of suggested values based on the value of previous inputs.<br>
 
 __allowed_values__ `array or function`  `default: null`<br>
-Exibe uma lista de opções no formato `combobox`, sem opção para inserir outros valores.<br>
-É possível retornar uma `function` para que os valores possam ser atualizados em tempo real.<br>
-Permite, por exemplo, exibir uma lista de valores sugeridos baseado no valor dos inputs anteriores.<br>
+Displays a list of options in `combobox` format, without the option to enter other values.<br>
+It is possible to return a `function` so that the values can be updated in real time.<br>
+Allows, for example, to display a list of suggested values based on the value of previous inputs.<br>
 
-### _Disponível apenas para tipo 'number'_<br>
+### _Available only for type 'number'_<br>
 __min__ `number`  `default: 0`<br>
-Valor mínimo permitido.<br>
+Minimum allowed value.<br>
 
 __max__ `number`  `default: 100`<br>
-Valor máximo permitido.<br>
+Maximum allowed value.<br>
 
 __component__ `string`  `default: 'spinner'`<br>
-Define o tipo de componente utilizado.<br>
-Valores disponíveis: `spinner` `combobox` `slider`.<br>
+Define the type of component used.<br>
+Available values: `spinner` `combobox` `slider`.<br>
 
 __decimal__ `boolean`  `default: false`<br>
-Define se o componente aceitará valores decimais ou apenas inteiros.<br>
-Disponível apenas para `spinner` e `slider`.<br>
+Define whether the component will accept decimal values or only integers.<br>
+Available only for `spinner` and `slider`.<br>
 
 __unit__ `string`  `default: null`<br>
-Texto adicionado após o valor atual exibido no componente.<br>
-Disponível apenas para `slider`.<br>
+Text added after the current value displayed in the component.<br>
+Available only for `slider`.<br>
 
-### _Disponível apenas para tipo 'receiver'_<br>
-__receiver__ `string` _(obrigatório)_<br>
-Permite selecionar o ID de um receptor criado, para realizar comunicações utilizando o método `apiRequest`, passando o ID do receptor como parâmetro.<br>
-Por exemplo, selecionar um receptor do tipo `obs_v5` (OBS Studio WebSocket v5) para poder enviar requisições para este receptor configurado.<br>
-A partir da `v2.23.0` é possível definir múltiplos valores separados por vírgula, por exemplo: `receiver: 'obs_v4,obs_v5'`<br>
-Valores disponíveis:<br>
+### _Available only for 'receiver' type_<br>
+__receiver__ `string` _(mandatory)_<br>
+Allows selecting the ID of a created receiver to perform communications using the `apiRequest` method, passing the receiver's ID as a parameter.<br>
+For example, select a receiver of type `obs_v5` (OBS Studio WebSocket v5) to be able to send requests to this configured receiver.<br>
+Starting from `v2.23.0`, it is possible to define multiple values separated by commas, for example: `receiver: 'obs_v4,obs_v5'`<br>
+Available values:<br>
 `get` HTTP GET (Query) `v2.23.0+`<br>
 `post` HTTP POST `v2.23.0+`<br>
 `ws` WebSocket `v2.23.0+`<br>
@@ -116,54 +116,54 @@ Valores disponíveis:<br>
 `tbot` Telegram Bot<br>
 `openai` OpenAI API
 
-### _Disponível apenas para tipo 'background'_<br>
+### _Available only for 'background' type_<br>
 __background_type__ `string`  `default: 'all'`<br>
-Tipos disponíveis: `all`  `theme`  `my_video`  `my_image`  `video`  `image`
+Available types: `all`  `theme`  `my_video`  `my_image`  `video`  `image`
 
-### _Disponível apenas para tipo 'title'_ <br>
+### _Available only for type 'title'_ <br>
 __setup__ `function`  `default: null`  `v2.24.0+`<br>
-Método que será executado ao exibir uma janela com inputs.<br>
-O parâmetro recebido pela function é um objeto do tipo `JSInputParamWindow`.<br>
-Exemplo de uso: capturar a referência para o objeto `dialog` no contexto atual e chamar `dialog.ok()` em outra situação, por exemplo, para forçar a reinicialização da janela.<br>
+Method that will be executed when displaying a window with inputs.<br>
+The parameter received by the function is an object of type `JSInputParamWindow`.<br>
+Usage example: capture the reference to the `dialog` object in the current context and call `dialog.ok()` in another situation, for example, to force the window to restart.<br>
 ```javascript
 function(dialog) {
-  //simula o clique no botão ok
+  //simulates clicking the ok button
   //dialog.ok();
 
-  //simula o clique no botão cancel
+  //simulates clicking the cancel button
   //dialog.cancel();
 }
 ```
 
-### _Disponível apenas para tipo 'label'_ <br>
+### _Available only for 'label' type_ <br>
 `v2.22.0+` <br>
-__text__ `string or function` _(obrigatório)_ Texto que será exibido. Pode ser uma function que retorna uma string.<br>
-__copyable__ `boolean` `default: false` Exibe um ícone de copiar, para copiar o conteúdo de `text`.<br>
-__text_to_copy__ `string or function` `default: text` Texto que será copiado em vez de `text`.<br>
-__monospaced__ `boolean` `default: false` Exibir o texto com uma fonte monospaced.<br>
+__text__ `string or function` _(mandatory)_ Text that will be displayed. It can be a function that returns a string.<br>
+__copyable__ `boolean` `default: false` Displays a copy icon to copy the content of `text`.<br>
+__text_to_copy__ `string or function` `default: text` Text that will be copied instead of `text`.<br>
+__monospaced__ `boolean` `default: false` Display the text in a monospaced font.<br>
 
 `v2.24.0+` <br>
-__hide_label__ `boolean` `default: false` Para exibir somente o texto, centralizado, sem o "label" identificador do campo `name`.<br>
+__hide_label__ `boolean` `default: false` To display only the text, centered, without the "label" identifying the field `name`.<br>
 
-### _Disponível apenas para tipo 'button'_ <br>
+### _Available only for 'button' type_ <br>
 `v2.22.0+` <br>
-__button_label__ `string or function` _(obrigatório)_ Texto que será exibido no botão. Pode ser uma function que retorna uma string.<br>
-__action__ `function` _(obrigatório)_ Ação que será executada ao clicar no botão.<br>
-__hide_label__ `boolean` `default: false` Para exibir somente o botão, centralizado, sem o "label" identificador do campo `name`.<br>
+__button_label__ `string or function` _(mandatory)_ Text that will be displayed on the button. It can be a function that returns a string.<br>
+__action__ `function` _(mandatory)_ Action that will be executed when clicking the button.<br>
+__hide_label__ `boolean` `default: false` To display only the button, centered, without the "label" identifying the field `name`.<br>
 `v2.23.0+` <br>
-__button_icon__ `string` `default: null` Ícone exibido no botão. Saiba mais: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+__button_icon__ `string` `default: null` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
 
-### _Disponível apenas para tipo 'settings'_ <br>
-Permite criar um botão que abre outra janela de input com novos itens.<br>
+### _Available only for type 'settings'_ <br>
+Allows you to create a button that opens another input window with new items.<br>
 `v2.23.0+` <br>
-__button_label__ `string or function` `default: ''` Texto que será exibido no botão. Pode ser uma function que retorna uma string.<br>
-__settings__ `Array<InputParam>` _(obrigatório)_ Lista de itens exibidos ao clicar no botão de configuração.<br>
-__hide_label__ `boolean` `default: false` Para exibir somente o botão, centralizado, sem o "label" identificador do campo `name`.<br>
-__button_icon__ `string` `default: 'settings'` Ícone exibido no botão. Saiba mais: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+__button_label__ `string or function` `default: ''` Text that will be displayed on the button. It can be a function that returns a string.<br>
+__settings__ `Array<InputParam>` _(mandatory)_ List of items displayed when clicking the settings button.<br>
+__hide_label__ `boolean` `default: false` To display only the button, centered, without the "label" identifying the field `name`.<br>
+__button_icon__ `string` `default: 'settings'` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
 
 ---
 
-Alguns exemplos de input:
+Some examples of input:
 
 ```javascript
 {
@@ -228,9 +228,9 @@ Alguns exemplos de input:
             name: 'allowed label',
             type: 'string',
   allowed_values: [
-   //exibe na interface (combobox) o valor do parâmetro 'label'
-   //mas o conteúdo na variável 'obj.input.option'
-   //será o valor do parâmetro 'value'
+   //displays in the interface (combobox) the value of the 'label' parameter
+   //but the content in the variable 'obj.input.option'
+   //it will be the value of the parameter 'value'
    {value: '1', label: 'ABC'},
    {value: '2', label: 'XYZ'},
    {value: '3', label: '123'}
@@ -570,17 +570,17 @@ Alguns exemplos de input:
    button_label: "button_label",
        settings: [{
                      id: 'msg',
-                   name: 'Mensagem',
+                   name: 'Message',
                    type: 'string'
                  }, {
                      id: 'duration',
-                   name: 'Duração',
+                   name: 'Duration',
                    type: 'number'
                  }]
 }
 
-// Os campos definidos em settings ficam dentro do id do campo superior
-// Por exemplo
+// The fields defined in settings are within the id of the upper field
+// For example
 // var_name.msg
 // var_name.duration
 ```

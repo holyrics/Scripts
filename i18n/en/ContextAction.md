@@ -1,31 +1,31 @@
 # ContextAction
 
-**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/ContextAction.md)
+**EN** | [PT](https://github.com/holyrics/Scripts/blob/main/ContextAction.md)
 
 ---
 
 
-`menu ferramentas > diversos > ações de contexto`
+`tools menu > several > context actions`
 
-Cria itens no menu de contexto (botão direito do mouse) de um respectivo item, permitindo realizar ações específicas para um item.<br>
-Por exemplo, criar uma ação chamada `Sem Áudio` que executa um vídeo sem áudio.<br>
-Ao clicar com o botão direito em um item de vídeo no programa, no submenu `Ação de contexto`, selecionando o item `Sem Áudio`, as informações do vídeo serão redirecionadas para a respectiva `function`.<br>
-E então a function pode ter a implementação de definir o player do programa para `mute = true` e depois executar o respectivo vídeo.
+Creates items in the context menu (right-click) of a respective item, allowing specific actions to be performed for an item.<br>
+For example, create an action called `No Audio` that plays a video without sound.<br>
+By right-clicking on a video item in the program, in the `Context Action` submenu, selecting the `Mute` item, the video information will be redirected to the respective `function`.<br>
+And then the function can implement setting the program's player to `mute = true` and then execute the respective video.
 
 
-O parâmetro `obj.type` contém o tipo do item que gerou a ação.<br>
-O parâmetro `obj.item` contém as informações do respectivo item que gerou a ação.
+The parameter `obj.type` contains the type of the item that triggered the action.<br>
+The parameter `obj.item` contains the information of the respective item that triggered the action.
 
 `v2.24.0+`<br>
-A partir da versão 2.24.0 é possível criar ação de contexto selecionando múltiplos itens.<br>
-Quando a ação for gerada a partir de uma seleção múltipla, os itens estarão disponíveis em `obj.items` e o `obj.item` será `null`.
+Starting from version 2.24.0, it is possible to create a context action by selecting multiple items.<br>
+When the action is generated from a multiple selection, the items will be available in `obj.items` and `obj.item` will be `null`.
 
-## Exemplo
+## Example
 
 ```javascript
 function scriptAction(obj) {
     if (obj.items) {
-        //múltiplos itens
+        //multiple items
         return;
     }
     if (obj.type == 'video') {

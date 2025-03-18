@@ -1,5 +1,10 @@
 # TextTransform
 
+**PT** | [EN](https://github.com/holyrics/Scripts/blob/main/i18n/en/TextTransform.md)
+
+---
+
+
 `menu arquivo > configurações > diversos > inserir texto`
 
 Permite inserir um texto no início ou no final de um slide ou alterar o texto atual.<br>
