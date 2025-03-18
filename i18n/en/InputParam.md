@@ -151,7 +151,7 @@ __button_label__ `string or function` _(mandatory)_ Text that will be displayed 
 __action__ `function` _(mandatory)_ Action that will be executed when clicking the button.<br>
 __hide_label__ `boolean` `default: false` To display only the button, centered, without the "label" identifying the field `name`.<br>
 `v2.23.0+` <br>
-__button_icon__ `string` `default: null` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+__button_icon__ `string` `default: null` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/i18n/en/Icon.md)<br>
 
 ### _Available only for type 'settings'_ <br>
 Allows you to create a button that opens another input window with new items.<br>
@@ -159,7 +159,7 @@ Allows you to create a button that opens another input window with new items.<br
 __button_label__ `string or function` `default: ''` Text that will be displayed on the button. It can be a function that returns a string.<br>
 __settings__ `Array<InputParam>` _(mandatory)_ List of items displayed when clicking the settings button.<br>
 __hide_label__ `boolean` `default: false` To display only the button, centered, without the "label" identifying the field `name`.<br>
-__button_icon__ `string` `default: 'settings'` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+__button_icon__ `string` `default: 'settings'` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/i18n/en/Icon.md)<br>
 
 ---
 

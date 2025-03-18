@@ -39,7 +39,7 @@ If the item is enabled, it will be displayed in green by default, unless the `ba
 `description` (v2.21.0+) item description. The description will be added after the name/title of the item<br>
 
 `icon` (v2.21.0+) custom item icon. Based on an existing item in the program.<br>
-Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/i18n/en/Icon.md)<br>
 
 `hint` (v2.24.0+) Tooltip text that will be displayed when the mouse hovers over the item.<br>
 Available only for items of type: [ModuleAction](https://github.com/holyrics/JSCommunity/tree/main/src/modules#moduleaction)<br>

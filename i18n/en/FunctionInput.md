@@ -41,4 +41,4 @@ function hGetItemInputParams() {
 
 # Syntax
 
-[InputParam](https://github.com/holyrics/Scripts/blob/main/InputParam.md)
+[InputParam](https://github.com/holyrics/Scripts/blob/main/i18n/en/InputParam.md)
