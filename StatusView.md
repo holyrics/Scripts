@@ -37,7 +37,7 @@ Se o item estiver ativado, ele será exibido na cor verde por padrão, caso o va
 Saiba mais: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
 
 `hint` (v2.24.0+) Texto de dica que será exibido ao deixar o mouse parado em cima do item.<br>
-Disponível apenas para itens do tipo [ModuleAction](https://github.com/holyrics/JSCommunity/tree/main/src/modules#moduleaction)<br>
+Disponível apenas para itens do tipo: [ModuleAction](https://github.com/holyrics/JSCommunity/tree/main/src/modules#moduleaction)<br>
 
 Obs.: Todos os parâmetros são opcionais
 

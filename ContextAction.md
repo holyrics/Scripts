@@ -287,4 +287,41 @@ function scriptAction(obj) {
 }
 ```
 
+## service
 
+`2.25.0+`
+```json
+{
+  "id": "1742261675373",
+  "name": "",
+  "disabled": false,
+  "week": "all",
+  "day": "sun",
+  "hour": 10,
+  "minute": 0,
+  "type": "service",
+  "hide_week": [],
+  "metadata": {
+    "modified_time_millis": "0"
+  }
+}
+```
+
+## event
+
+`2.25.0+`
+```json
+{
+  "id": "1742261675374",
+  "type": "event",
+  "name": "",
+  "description": "",
+  "datetime": "2025-03-08 16:00",
+  "datetime_millis": "1741460400000",
+  "wallpaper": "",
+  "metadata": {
+    "modified_time_millis": "0",
+    "service": null
+  }
+}
+```

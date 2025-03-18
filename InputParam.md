@@ -28,9 +28,15 @@ __onchange__ `function`  `default: null`  `v2.23.0+`<br>
 Método que será executado sempre que o componente tiver seu valor alterado.<br>
 (métodos `only read` não geram `onchange`, por exemplo, `type: title`)
 O parâmetro recebido pela function contém o `input` com o valor atual de todos os itens `InputParam` da janela atual, não somente do `InputParam` atual.<br>
+O parâmetro `view` (Map) foi adicionado na `v2.25.0`, permitindo, por exemplo, alterar o nome (label) atual definido para o parâmetro.<br>
 ```javascript
 function(obj) {
   //obj.input.xyz
+
+  //v2.25.0+
+  //obj.view.xyz
+  //obj.view.xyz.setName(string)
+  //obj.view.xyz.getName()
 }
 ```
 
