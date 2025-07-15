@@ -21,8 +21,11 @@ To use HTML formatting, start the string with `<html>`.<br>
 __type__ `string`  `default: 'string'`<br>
 Parameter type. This defines the type of component displayed in the interface to set values.<br>
 For example, a boolean type will display a `checkbox`.<br>
-Available types: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`<br>
-
+Available types: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`  <br>
+ <br>
+**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`<br>
+ <br>
+ <br>
 __description__ `string`  `default: ''`<br>
 Provide a description for the parameter, so it can be displayed on the screen as "help".<br>
 
@@ -63,6 +66,13 @@ function(value, input, inputs) {
 }
 ```
 
+### _Available only for the types 'string' 'textarea' 'password'_<br>
+__cols__ `number`  `default: 20`<br>
+Width of the component, based on the number of columns.<br>
+
+__max_length__ `number`  `default: 8192`<br>
+Maximum character size.<br>
+
 ### _Available only for 'string' type_<br>
 __suggested_values__ `array or function`  `default: null`<br>
 Displays a list of suggestions when clicking on the "arrow" available in the text box, but allows any value to be typed in the text box.<br>
@@ -73,6 +83,10 @@ __allowed_values__ `array or function`  `default: null`<br>
 Displays a list of options in `combobox` format, without the option to enter other values.<br>
 It is possible to return a `function` so that the values can be updated in real time.<br>
 Allows, for example, to display a list of suggested values based on the value of previous inputs.<br>
+
+### _Available only for 'textarea' type_<br>
+__rows__ `number`  `default: 3`<br>
+Number of visible rows in the interface.<br>
 
 ### _Available only for type 'number'_<br>
 __min__ `number`  `default: 0`<br>
@@ -92,6 +106,13 @@ Available only for `spinner` and `slider`.<br>
 __unit__ `string`  `default: null`<br>
 Text added after the current value displayed in the component.<br>
 Available only for `slider`.<br>
+
+### _Available only for types 'audio' 'video' 'image' 'file'_<br>
+__accept_file__ `boolean`  `default: true`  `v2.23.0+`<br>
+Accept files in the file selection window<br>
+
+__accept_folder__ `boolean`  `default: true`  `v2.23.0+`<br>
+Accept folders in the file selection window<br>
 
 ### _Available only for 'receiver' type_<br>
 __receiver__ `string` _(mandatory)_<br>
@@ -160,6 +181,16 @@ __button_label__ `string or function` `default: ''` Text that will be displayed 
 __settings__ `Array<InputParam>` _(mandatory)_ List of items displayed when clicking the settings button.<br>
 __hide_label__ `boolean` `default: false` To display only the button, centered, without the "label" identifying the field `name`.<br>
 __button_icon__ `string` `default: 'settings'` Icon displayed on the button. Know more: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/i18n/en/Icon.md)<br>
+
+### _Available only for the types 'object_model' 'object_model_manage_list'_ <br>
+Available only for modules<br>
+`v2.26.0+` <br>
+__model__ `string` _(mandatory)_ **id** of the model declared in the respective module<br>
+
+### _Available only for the 'module' type_ <br>
+`v2.26.0+` <br>
+__filter_by_info_id__ `string` To filter the available items by the id declared in `info()` of a module<br>
+__jscommunity_only__ `boolean` To filter only modules installed by **JSCommunity**<br>
 
 ---
 
@@ -583,4 +614,32 @@ Some examples of input:
 // For example
 // var_name.msg
 // var_name.duration
+```
+
+```javascript
+{
+     id: 'var_name',
+   name: 'Input name',
+   type: 'object_model',
+  model: 'object_model_id'
+}
+```
+
+```javascript
+{
+     id: 'var_name',
+   name: 'Input name',
+   type: 'object_model_manage_list',
+  model: 'object_model_id'
+}
+```
+
+```javascript
+{
+                 id: 'var_name',
+               name: 'Input name',
+               type: 'module',
+  filter_by_info_id: 'module_id',
+   jscommunity_only: true
+}
 ```

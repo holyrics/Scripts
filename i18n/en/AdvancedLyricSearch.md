@@ -37,6 +37,28 @@ Available items:<br>
 - [played_days](#played_days)
 - [played_count](#played_count)
 
+`v2.26.0`<br>
+- [arrangement](#arrangement)
+- [spotify_id](#streaming_id)
+- [spotify_id_bt](#streaming_id_bt)
+- [spotify_id_any](#streaming_id_any)
+- [youtube_id](#streaming_id)
+- [youtube_id_bt](#streaming_id_bt)
+- [youtube_id_any](#streaming_id_any)
+- [deezer_id](#streaming_id)
+- [deezer_id_bt](#streaming_id_bt)
+- [deezer_id_any](#streaming_id_any)
+- [linked_audio](#linked_audio)
+- [linked_audio_bt](#linked_audio_bt)
+- [linked_audio_any](#linked_audio_any)
+- [saved_theme_by_id](#saved_theme_by_id)
+- [saved_theme_by_name](#saved_theme_by_name)
+- [played_hour](#played_hour)
+- [played_day_of_week](#played_day_of_week)
+- [played_month](#played_month)
+- [played_year](#played_year)
+- [played_service](#played_service)
+
 Note: Some items allow the use of the translated name, for example, "título" instead of "title".
 
 It is also possible to use an extra item created by the user as a key for the letters.
@@ -310,4 +332,208 @@ The "history" field is used as a basis, meaning that only the displays of the op
 ```
 ```
 %played_count: > 5
+```
+
+--- 
+
+### arrangement
+
+`string` `regex`<br>
+Filter songs that contain a specific arrangement (by name)<br>
+```
+%arrangement: abc
+```
+```
+%arrangement: xyz
+```
+--- 
+
+### streaming_id
+
+`spotify_id`  `youtube_id`  `deezer_id`<br>
+`string`<br>
+Filter songs by the link saved in the 'extras' information of the song in the respective streaming<br>
+The search is conducted only on items of type **"voice"**<br>
+The search can be done by providing only the **id** or the complete link<br>
+```
+%spotify_id: abc
+```
+```
+%youtube_id: xyz
+```
+--- 
+
+### streaming_id_bt
+
+`spotify_id_bt`  `youtube_id_bt`  `deezer_id_bt`<br>
+`string`<br>
+Filter songs by the link saved in the 'extras' information of the song in the respective streaming<br>
+The search is conducted only on items of type **"playback"**<br>
+The search can be done by providing only the **id** or the complete link<br>
+```
+%spotify_id_bt: abc
+```
+```
+%youtube_id_bt: xyz
+```
+--- 
+
+### streaming_id_any
+
+`spotify_id_any`  `youtube_id_any`  `deezer_id_any`<br>
+`string`<br>
+Filter songs by the link saved in the 'extras' information of the song in the respective streaming<br>
+The search is made in items of type **"voice"** and **"playback"**<br>
+The search can be done by providing only the **id** or the complete link<br>
+```
+%spotify_id_any: abc
+```
+```
+%youtube_id_any: xyz
+```
+--- 
+
+### linked_audio
+
+`string` `regex`<br>
+Filter songs by the name of the associated audio file in the song's 'extras' information<br>
+```
+%linked_audio: filename.mp3
+```
+```
+%linked_audio: folder/filename.mp3
+```
+---
+
+### linked_audio_bt
+
+`string` `regex`<br>
+Filter songs by the name of the associated audio file in the song's 'extras' information<br>
+```
+%linked_audio: filename.mp3
+```
+```
+%linked_audio: folder/filename.mp3
+```
+--- 
+
+### linked_audio_any
+
+`string` `regex`<br>
+Filter songs by the name of the associated audio file in the song's 'extras' information<br>
+```
+%linked_audio: filename.mp3
+```
+```
+%linked_audio: folder/filename.mp3
+```
+--- 
+
+### saved_theme_by_id
+
+`string`<br>
+Filter items by the **id** of the theme saved as **default theme** in the respective item<br>
+```
+%saved_theme_by_id: 1234
+```
+--- 
+
+### saved_theme_by_name
+
+`string` `regex`<br>
+Filter items by the **name** of the theme saved as **default theme** in the respective item<br>
+```
+%saved_theme_by_name: abc
+```
+```
+%saved_theme_by_name: xyz
+```
+--- 
+
+### played_hour
+
+`string`<br>
+Filter songs by the number of times they were played in a specific hour of the day.<br>
+The "history" field is used as a basis, meaning that only the displays of the option "marked as played" are considered.
+```
+//was played more than 10 times at 7 PM
+%played_hour: 19 > 10
+```
+```
+//was played less than 10 times during the hours of 7 PM, 8 PM, 9 PM, and 10 PM
+%played_hour: 19,20,21,22 <= 10
+```
+```
+//was played less than 10 times in the interval of 7 PM, 8 PM, 9 PM, and 10 PM
+%played_hour: 19-22
+```
+--- 
+
+### played_day_of_week
+
+`string`<br>
+Filter songs by the number of times they were played on a specific day of the week.<br>
+`sun` `mon` `tue` `wed` `thu` `fri` `sat`
+The "history" field is used as a basis, meaning that only the displays of the option "marked as played" are considered.
+```
+//was played more than 20 times on Sunday
+%played_day_of_week: sun > 20
+```
+```
+//was played 20 times or less including Saturday and Sunday
+%played_day_of_week: sat,sun <= 20
+```
+--- 
+
+### played_month
+
+`string`<br>
+Filter songs by the number of times they were played in a month of the year.<br>
+`1 ~ 12`<br>
+The "history" field is used as a basis, meaning that only the displays of the option "marked as played" are considered.
+```
+//was played less than 5 times in January
+%played_month: 1 < 5
+```
+```
+//was played 5 times or more counting March, April, or May
+%played_month: 3,4,5 >= 5
+```
+```
+//was played 5 times or more counting March, April, or May
+%played_month: 3-5
+```
+--- 
+
+### played_year
+
+`string`<br>
+Filter songs by the number of times they were played in a specific year.<br>
+The "history" field is used as a basis, meaning that only the displays of the option "marked as played" are considered.
+```
+//was played more than 10 times in 2023
+%played_year: 2023 > 10
+```
+```
+//was played 10 times or less counting 2023, 2024, and 2025
+%played_year: 2023,2024,2025 <= 10
+```
+```
+//was played 10 times or less counting 2023, 2024, and 2025
+%played_year: 2023-2025
+```
+--- 
+
+### played_service
+
+`string`<br>
+Filter songs by the number of times they have been played in a specific service (by the name of the service).<br>
+The "history" field is used as a basis, meaning that only the displays of the option "marked as played" are considered.
+```
+//was played more than 20 times during the respective service time
+%played_service: name of the worship > 20
+```
+```
+//was played 10 times or less during the respective service time
+%played_service: name of the worship <= 10
 ```

@@ -129,7 +129,7 @@ function scriptAction(obj) {
 ## song
 ```json
 {
-  "id": 12345,
+  "id": "12345",
   "title": "title",
   "artist": "artist",
   "author": "author",
@@ -186,18 +186,7 @@ function scriptAction(obj) {
 # Available only for modules
 ## favorite
 ```json
-{
-  "id": "zdBNPrwV7g3V7",
-  "type": "favorite",
-  "name": "favorite name",
-  "item": {
-    "id": "zdBNPrwV7g3V7",
-    "type": "image",
-    "name": "file name.jpg",
-    "isDir": false,
-    "properties": {}
-  }
-}
+{}
 ```
 
 ## paragraph_preview
@@ -327,6 +316,25 @@ function scriptAction(obj) {
   "metadata": {
     "modified_time_millis": "0",
     "service": null
+  }
+}
+```
+
+## song_group
+
+`2.26.0+`
+```json
+{
+  "id": "Example",
+  "name": "Example",
+  "add_chorus_between_verses": false,
+  "hide_in_interface": false,
+  "songs": [
+    "123",
+    "456"
+  ],
+  "metadata": {
+    "modified_time_millis": "0"
   }
 }
 ```

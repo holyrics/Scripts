@@ -14,6 +14,7 @@ Método que recebe o objeto `Lyrics` identificado e permite editá-lo.<br>Retorn
 
 | Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 | `obj.item` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/item> |
@@ -48,6 +49,7 @@ function transformSong(obj) {
 
 | Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 | `obj.item` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/item> |
@@ -86,6 +88,7 @@ Executado após uma lista ser carregada
 
 | Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 

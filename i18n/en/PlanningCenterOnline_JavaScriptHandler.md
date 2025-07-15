@@ -14,6 +14,7 @@ Method that receives the identified `Lyrics` object and allows it to be edited.<
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 | `obj.item` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/item> |
@@ -48,6 +49,7 @@ function transformSong(obj) {
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 | `obj.item` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/item> |
@@ -86,6 +88,7 @@ Executed after a list is loaded
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
+| `obj.folder` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/folder> |
 | `obj.service_type` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/service_type> |
 | `obj.plan` | _Object_ | <https://developer.planning.center/docs/#/apps/services/2018-11-01/vertices/plan> |
 

@@ -21,8 +21,11 @@ Para utilizar formatação HTML inicie a string com `<html>`.<br>
 __type__ `string`  `default: 'string'`<br>
 Tipo de parâmetro. Isso define o tipo de componente exibido na interface para definir valores.<br>
 Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
-Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`<br>
-
+Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`  <br>
+ <br>
+**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`<br>
+ <br>
+ <br>
 __description__ `string`  `default: ''`<br>
 Informa uma descrição para o parâmetro, para poder ser exibido na tela como "ajuda".<br>
 
@@ -63,6 +66,13 @@ function(value, input, inputs) {
 }
 ```
 
+### _Disponível apenas para os tipos 'string' 'textarea' 'password'_<br>
+__cols__ `number`  `default: 20`<br>
+Largura do componente, baseado na quantidade de colunas.<br>
+
+__max_length__ `number`  `default: 8192`<br>
+Tamanho máximo de caracteres.<br>
+
 ### _Disponível apenas para tipo 'string'_<br>
 __suggested_values__ `array or function`  `default: null`<br>
 Exibe uma lista de sugestões ao clicar na "setinha" disponível na caixa de texto, mas permite que qualquer valor seja digitado na caixa de texto.<br>
@@ -73,6 +83,10 @@ __allowed_values__ `array or function`  `default: null`<br>
 Exibe uma lista de opções no formato `combobox`, sem opção para inserir outros valores.<br>
 É possível retornar uma `function` para que os valores possam ser atualizados em tempo real.<br>
 Permite, por exemplo, exibir uma lista de valores sugeridos baseado no valor dos inputs anteriores.<br>
+
+### _Disponível apenas para tipo 'textarea'_<br>
+__rows__ `number`  `default: 3`<br>
+Quantidade de linhas visíveis na interface.<br>
 
 ### _Disponível apenas para tipo 'number'_<br>
 __min__ `number`  `default: 0`<br>
@@ -92,6 +106,13 @@ Disponível apenas para `spinner` e `slider`.<br>
 __unit__ `string`  `default: null`<br>
 Texto adicionado após o valor atual exibido no componente.<br>
 Disponível apenas para `slider`.<br>
+
+### _Disponível apenas para os tipos 'audio' 'video' 'image' 'file'_<br>
+__accept_file__ `boolean`  `default: true`  `v2.23.0+`<br>
+Aceitar arquivos na janela de seleção de arquivo<br>
+
+__accept_folder__ `boolean`  `default: true`  `v2.23.0+`<br>
+Aceitar pastas na janela de seleção de arquivo<br>
 
 ### _Disponível apenas para tipo 'receiver'_<br>
 __receiver__ `string` _(obrigatório)_<br>
@@ -160,6 +181,16 @@ __button_label__ `string or function` `default: ''` Texto que será exibido no b
 __settings__ `Array<InputParam>` _(obrigatório)_ Lista de itens exibidos ao clicar no botão de configuração.<br>
 __hide_label__ `boolean` `default: false` Para exibir somente o botão, centralizado, sem o "label" identificador do campo `name`.<br>
 __button_icon__ `string` `default: 'settings'` Ícone exibido no botão. Saiba mais: [Scripts > Icon](https://github.com/holyrics/Scripts/blob/main/Icon.md)<br>
+
+### _Disponível apenas para os tipos 'object_model' 'object_model_manage_list'_ <br>
+Disponível apenas para módulos<br>
+`v2.26.0+` <br>
+__model__ `string` _(obrigatório)_ **id** do modelo declarado no respectivo módulo<br>
+
+### _Disponível apenas para o tipo 'module'_ <br>
+`v2.26.0+` <br>
+__filter_by_info_id__ `string` Para filtrar os itens disponíveis pelo id declarado em `info()` de um módulo<br>
+__jscommunity_only__ `boolean` Para filtrar somente módulos instalados pelo **JSCommunity**<br>
 
 ---
 
@@ -583,4 +614,32 @@ Alguns exemplos de input:
 // Por exemplo
 // var_name.msg
 // var_name.duration
+```
+
+```javascript
+{
+     id: 'var_name',
+   name: 'Input name',
+   type: 'object_model',
+  model: 'object_model_id'
+}
+```
+
+```javascript
+{
+     id: 'var_name',
+   name: 'Input name',
+   type: 'object_model_manage_list',
+  model: 'object_model_id'
+}
+```
+
+```javascript
+{
+                 id: 'var_name',
+               name: 'Input name',
+               type: 'module',
+  filter_by_info_id: 'module_id',
+   jscommunity_only: true
+}
 ```
