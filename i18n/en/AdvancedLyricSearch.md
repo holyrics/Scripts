@@ -209,10 +209,10 @@ Filters only songs that contain at least one slide with the specified name.<br>
 Accepts partial search using only regex.<br>
 The simple string search needs to provide the full name of the description
 ```
-%title: chorus
+%slide_description: chorus
 ```
 ```
-%title: --rgx (verse)
+%slide_description: --rgx (verse)
 ```
 
 --- 
