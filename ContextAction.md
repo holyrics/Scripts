@@ -186,7 +186,19 @@ function scriptAction(obj) {
 # Available only for modules
 ## favorite
 ```json
-{}
+{
+  "id": "zdBNPrwV7g3V7",
+  "type": "favorite",
+  "name": "favorite name",
+  "folders": [],
+  "item": {
+    "id": "zdBNPrwV7g3V7",
+    "type": "image",
+    "name": "file name.jpg",
+    "isDir": false,
+    "properties": {}
+  }
+}
 ```
 
 ## paragraph_preview
@@ -247,6 +259,12 @@ function scriptAction(obj) {
     "name": "Temporário",
     "datetime": "2024-08-28 12:00",
     "datetime_millis": "1734201989500"
+  },
+  "playlist_title": {
+    "title": "Example",
+    "title_index": "5",
+    "subitem_index": "2",
+    "playlist_index": "8"
   }
 }
 ```
@@ -259,14 +277,17 @@ function scriptAction(obj) {
     "type": "song",
     "name": "title (artist)",
     "song_id": "12345",
-    "reference_id": "12345"
+    "reference_id": "12345",
+    "arrangement_name": null,
+    "translation_preset_id": null
   },
   "playlist": {
     "type": "temporary",
     "name": "Temporário",
     "datetime": "2024-12-14 15:46",
     "datetime_millis": "1734201989502"
-  }
+  },
+  "playlist_title": null
 }
 ```
 
@@ -335,6 +356,28 @@ function scriptAction(obj) {
   ],
   "metadata": {
     "modified_time_millis": "0"
+  }
+}
+```
+
+## bible_verse
+
+`2.27.0+`
+```json
+{
+  "reference": "Salmos 23:1",
+  "ids": [
+    "19023001"
+  ],
+  "bible": {
+    "version": "pt_acf",
+    "title": "Almeida Corrigida Fiel",
+    "language": {
+      "id": "pt",
+      "iso": "pt",
+      "name": "Português",
+      "alt_name": "Portuguese"
+    }
   }
 }
 ```

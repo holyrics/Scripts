@@ -23,7 +23,7 @@ Tipo de parâmetro. Isso define o tipo de componente exibido na interface para d
 Por exemplo, tipo boolean irá exibir um `checkbox`.<br>
 Tipos disponíveis: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`  <br>
  <br>
-**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`<br>
+**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`  `slide_description`  `custom_message`<br>
  <br>
  <br>
 __description__ `string`  `default: ''`<br>
@@ -70,7 +70,7 @@ function(value, input, inputs) {
 __cols__ `number`  `default: 20`<br>
 Largura do componente, baseado na quantidade de colunas.<br>
 
-__max_length__ `number`  `default: 8192`<br>
+__max_length__ `number`  `default: 48 (string|password) | 8192 (textarea)`<br>
 Tamanho máximo de caracteres.<br>
 
 ### _Disponível apenas para tipo 'string'_<br>

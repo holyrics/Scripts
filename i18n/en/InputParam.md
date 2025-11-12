@@ -23,7 +23,7 @@ Parameter type. This defines the type of component displayed in the interface to
 For example, a boolean type will display a `checkbox`.<br>
 Available types: `title`  `separator`  `label (v2.22.0+)`  `string`  `textarea`  `number`  `boolean`  `password`  `date`  `time`  `datetime`  `color`  `receiver`  `song`  `holyrics_text`  `verse`  `audio`  `video`  `image`  `file`  `announcement`  `automatic_presentation`  `countdown`  `countdown_cp`  `cp_text`  `background`  `theme`  `button (v2.22.0+)`  `settings (v2.23.0+)`  <br>
  <br>
-**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`<br>
+**(v2.26.0+)**  `object_model`  `object_model_manage_list`  `module`  `transition_settings`  `song_key`  `time_sig`  `icon`  `bible_verse`  `bible_verse_list`  `bible_version`  `favorite`  `rule_group`  `slide_description`  `custom_message`<br>
  <br>
  <br>
 __description__ `string`  `default: ''`<br>
@@ -70,7 +70,7 @@ function(value, input, inputs) {
 __cols__ `number`  `default: 20`<br>
 Width of the component, based on the number of columns.<br>
 
-__max_length__ `number`  `default: 8192`<br>
+__max_length__ `number`  `default: 48 (string|password) | 8192 (textarea)`<br>
 Maximum character size.<br>
 
 ### _Available only for 'string' type_<br>
