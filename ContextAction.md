@@ -395,7 +395,7 @@ function scriptAction(obj) {
 `2.29.0+`
 ```json
 {
-  "id": "1784863052750",
+  "id": "1784863052864",
   "name": "Theme",
   "background": {
     "type": "color",
@@ -483,7 +483,7 @@ function scriptAction(obj) {
   "tag": "example",
   "backgrounds": [
     {
-      "id": "1784863052751",
+      "id": "1784863052865",
       "type": "theme",
       "name": "Theme",
       "width": null,
