@@ -44,6 +44,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\audio\\file name.mp3",
   "is_dir": false,
   "extension": "mp3",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -57,6 +58,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\audio\\folder name",
   "is_dir": true,
   "extension": "",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -70,6 +72,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\video\\file name.mp4",
   "is_dir": false,
   "extension": "mp4",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -83,6 +86,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\video\\folder name",
   "is_dir": true,
   "extension": "",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -96,6 +100,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\image\\file name.jpg",
   "is_dir": false,
   "extension": "jpg",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -109,6 +114,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\image\\folder name",
   "is_dir": true,
   "extension": "",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -122,6 +128,7 @@ function scriptAction(obj) {
   "file_path": "C:\\Holyrics\\Holyrics\\files\\media\\file\\file name.txt",
   "is_dir": false,
   "extension": "txt",
+  "tags": [],
   "properties": {}
 }
 ```
@@ -161,7 +168,8 @@ function scriptAction(obj) {
 ## automatic_presentation
 ```json
 {
-  "name": "name.ap"
+  "name": "name.ap",
+  "tags": []
 }
 ```
 
@@ -379,5 +387,113 @@ function scriptAction(obj) {
       "alt_name": "Portuguese"
     }
   }
+}
+```
+
+## background
+
+`2.29.0+`
+```json
+{
+  "id": "1784863052750",
+  "name": "Theme",
+  "background": {
+    "type": "color",
+    "id": "212121",
+    "opacity": 100.0
+  },
+  "base_color": "FFFFFF",
+  "font": {
+    "name": "CMG Sans",
+    "bold": true,
+    "italic": false,
+    "size": 10.0,
+    "color": "F5F5F5",
+    "line_spacing": 0.3,
+    "char_spacing": 0.0
+  },
+  "align": {
+    "horizontal": "center",
+    "vertical": "middle",
+    "margin": {
+      "top": 3.0,
+      "right": 3.0,
+      "bottom": 3.0,
+      "left": 3.0
+    }
+  },
+  "effect": {
+    "outline_color": "404040",
+    "outline_weight": 0.0,
+    "brightness_color": "C0C0C0",
+    "brightness_weight": 0.0,
+    "shadow_color": "404040",
+    "shadow_x_weight": 0.0,
+    "shadow_y_weight": 0.0,
+    "blur": true
+  },
+  "shape_fill": {
+    "type": "box",
+    "enabled": false,
+    "color": "000000",
+    "margin": {
+      "top": 5.0,
+      "right": 30.0,
+      "bottom": 10.0,
+      "left": 30.0
+    },
+    "corner": 0.0
+  },
+  "shape_outline": {
+    "type": "box",
+    "enabled": false,
+    "color": "000000",
+    "outline_thickness": 10.0,
+    "margin": {
+      "top": 5.0,
+      "right": 30.0,
+      "bottom": 10.0,
+      "left": 30.0
+    },
+    "corner": 0.0
+  },
+  "comment": {
+    "font_name": "Arial",
+    "bold": false,
+    "italic": true,
+    "relative_size": 100.0,
+    "color": "A0A0A0"
+  },
+  "settings": {
+    "uppercase": false,
+    "line_break": "system",
+    "transition_settings_id": null
+  },
+  "metadata": {
+    "modified_time_millis": "0"
+  }
+}
+```
+
+## background_tag
+
+`2.29.0+`
+```json
+{
+  "tag": "example",
+  "backgrounds": [
+    {
+      "id": "1784863052751",
+      "type": "theme",
+      "name": "Theme",
+      "width": null,
+      "height": null,
+      "duration": null,
+      "tags": [
+        "example"
+      ],
+      "bpm": 0.0
+    }
+  ]
 }
 ```
