@@ -65,6 +65,7 @@ Example:
 ```
 eyJ0eXBlIjoianNsaWJfYXBpX2F1dGgiLCJ0cyI6IjE3Nzk3MjYyNDciLCJkZXZpY2UiOiJob3N0bmFtZSIsInRva2VuIjoiT051cWtST1M5M3dUQVFnUmxqRFFjWkdnMGhUQ3UzTUFEckF5emJwM1lTNUVOMkhxZWJOc0MwZG5QVHZMMTJ4WiIsInNpZyI6ImJjYTQ3ZDRhNGYxNTRjM2YzYmU5MjZmMmU5NWJjOTQ4ODY0Mjg2NzcwNmU5ZTNhMTdjZjczN2YxOTNlYmIzY2UifQ==
 ```
+This is useful to allow the user to copy and paste the content in a location that does not have the option to read the QR Code, such as access through a desktop browser, for example.
 
 Example code:
 ```javascript

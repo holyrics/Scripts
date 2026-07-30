@@ -38,12 +38,17 @@ curl -X 'POST' \
 | `streaming.audio.spotify` | _String_ |  `v2.23.0+` |
 | `streaming.audio.youtube` | _String_ |  `v2.23.0+` |
 | `streaming.audio.deezer` | _String_ |  `v2.23.0+` |
+| `streaming.audio.apple_music` | _String_ |  `v2.29.0+` |
+| `streaming.audio.amazon_music` | _String_ |  `v2.29.0+` |
 | `streaming.backing_track` | _Object_ | Playback `v2.23.0+` |
 | `streaming.backing_track.spotify` | _String_ |  `v2.23.0+` |
 | `streaming.backing_track.youtube` | _String_ |  `v2.23.0+` |
 | `streaming.backing_track.deezer` | _String_ |  `v2.23.0+` |
+| `streaming.backing_track.apple_music` | _String_ |  `v2.29.0+` |
+| `streaming.backing_track.amazon_music` | _String_ |  `v2.29.0+` |
 | `extras` | _Object (opcional)_ | Mapa de objetos extras (adicionados pelo usuário)<br>Permitido apenas campos já existentes. `v2.23.0+` |
 | `title_translations` | _Object_ | Traduções para o slide título.<br>Conjunto chave/valor. `v2.23.0+` |
+| `tags` | _Array&lt;String&gt; (opcional)_ |  `v2.29.0+` |
 
 
 Observações:<br>
@@ -99,12 +104,16 @@ Modelo JSON complexo
     "audio": {
       "spotify": "spotify_id",
       "youtube": "youtube_id",
-      "deezer": "deezer_id"
+      "deezer": "deezer_id",
+      "apple_music": "apple_music_id",
+      "amazon_music": "amazon_music_id"
     },
     "backing_track": {
       "spotify": "spotify_id",
       "youtube": "youtube_id",
-      "deezer": "deezer_id"
+      "deezer": "deezer_id",
+      "apple_music": "apple_music_id",
+      "amazon_music": "amazon_music_id"
     }
   },
   "extras": {
