@@ -12,7 +12,7 @@ Tipos de itens disponíveis:<br>
 | Tipo | Classe |
 | ---- | ------------|
 | `song` | [Song](#song) |
-| `slide` | [Text](#text) |
+| `text` | [Text](#text) |
 | `audio` | [Audio](#audio) |
 | `video` | [Video](#video) |
 | `image` | [Image](#image) |
@@ -54,7 +54,7 @@ https://userdata.holyrics.com.br/api/v1/
 
 ### {type}/{id}
 Retorna o respectivo item pelo ID.<br>
-Tipos disponíveis: `song` `slide` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
+Tipos disponíveis: `song` `text` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
 
 
 
@@ -180,7 +180,7 @@ Tipos disponíveis: `audio` `video` `image` `file` `announcement` `automatic_pre
 ### {type}/search
 Pesquisa os itens disponíveis para o respectivo tipo.<br>
 Limite: 30 resultados<br>
-Tipos disponíveis: `song` `slide` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
+Tipos disponíveis: `song` `text` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
 
 **Parâmetros:**
 

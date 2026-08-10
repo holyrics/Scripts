@@ -12,7 +12,7 @@ Types of available items:<br>
 | Type | Class |
 | ---- | ------------|
 | `song` | [Song](#song) |
-| `slide` | [Text](#text) |
+| `text` | [Text](#text) |
 | `audio` | [Audio](#audio) |
 | `video` | [Video](#video) |
 | `image` | [Image](#image) |
@@ -54,7 +54,7 @@ https://userdata.holyrics.com.br/api/v1/
 
 ### {type}/{id}
 Returns the respective item by ID.<br>
-Available types: `song` `slide` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
+Available types: `song` `text` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
 
 
 
@@ -180,7 +180,7 @@ Available types: `audio` `video` `image` `file` `announcement` `automatic_presen
 ### {type}/search
 Search for the available items for the respective type.<br>
 Limit: 30 results<br>
-Available types: `song` `slide` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
+Available types: `song` `text` `audio` `video` `image` `file` `announcement` `automatic_presentation` `theme` `background`
 
 **Parameters:**
 
