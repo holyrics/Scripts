@@ -44,6 +44,11 @@ Standard endpoint
 https://userdata.holyrics.com.br/api/v1/
 ```
 
+Authentication (header)
+```
+'Authorization: Bearer {API_TOKEN}'
+```
+
 # Available endpoints 
   - [{type}/{id}](#typeid)
   - [{type}/list](#typelist)
