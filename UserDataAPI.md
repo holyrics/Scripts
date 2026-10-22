@@ -6,7 +6,7 @@
 
 
 API para listar os arquivos e dados do programa Holyrics disponíveis no computador  (somente leitura)<br>
-Disponível a partir da versão `2.30.0` prevista para `15/09/2026`
+Disponível a partir da versão `2.30.0`
 
 Tipos de itens disponíveis:<br>
 | Tipo | Classe |
@@ -41,7 +41,7 @@ Todas as respostas da API retornam um objeto padrão:
 
 Endpoint padrão
 ```
-https://userdata.holyrics.com.br/api/v1/
+https://userdata.holyrics.com.br/v1/
 ```
 
 Autenticação (header)
@@ -70,7 +70,7 @@ Tipos disponíveis: `song` `text` `audio` `video` `image` `file` `announcement` 
 | _Object_ | Objeto da classe correspondente ao tipo do item |
 
 
-**Exemplo:** [` userdata.holyrics.com.br/api/v1/text/31ca678b-6ad6-4ad7-ba48-ba409bc6c783 `](https://userdata.holyrics.com.br/api/v1/text/31ca678b-6ad6-4ad7-ba48-ba409bc6c783)<br>
+**Exemplo:** [` userdata.holyrics.com.br/v1/text/31ca678b-6ad6-4ad7-ba48-ba409bc6c783 `](https://userdata.holyrics.com.br/v1/text/31ca678b-6ad6-4ad7-ba48-ba409bc6c783)<br>
 
 <details>
   <summary>Resposta</summary>
@@ -143,7 +143,7 @@ Tipos disponíveis: `audio` `video` `image` `file` `announcement` `automatic_pre
 | _Array&lt;Object&gt;_ | Array de objetos da classe correspondente ao tipo do item |
 
 
-**Exemplo:** [` userdata.holyrics.com.br/api/v1/image/search?folder=example `](https://userdata.holyrics.com.br/api/v1/image/search?folder=example)<br>
+**Exemplo:** [` userdata.holyrics.com.br/v1/image/search?folder=example `](https://userdata.holyrics.com.br/v1/image/search?folder=example)<br>
 
 <details>
   <summary>Resposta</summary>
@@ -205,7 +205,7 @@ Tipos disponíveis: `song` `text` `audio` `video` `image` `file` `announcement` 
 | _Array&lt;Object&gt;_ | Array de objetos da classe correspondente ao tipo do item |
 
 
-**Exemplo:** [` userdata.holyrics.com.br/api/v1/song/search?q=example `](https://userdata.holyrics.com.br/api/v1/song/search?q=example)<br>
+**Exemplo:** [` userdata.holyrics.com.br/v1/song/search?q=example `](https://userdata.holyrics.com.br/v1/song/search?q=example)<br>
 
 <details>
   <summary>Resposta</summary>
